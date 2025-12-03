@@ -278,7 +278,7 @@ class PaymentPromptActivity : AppCompatActivity() {
 
         img.setOnLongClickListener { view ->
             view.alpha = 0.4f
-            Toast.makeText(this, "QR을 분석 중입니다…", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "해시(Hash) 분석 중입니다…", Toast.LENGTH_SHORT).show()
 
             val options = BarcodeScannerOptions.Builder()
                 .setBarcodeFormats(
@@ -312,7 +312,7 @@ class PaymentPromptActivity : AppCompatActivity() {
 
                     if (okLv2) {
                         // 2) 통과 시: 토스트 + (raw가 URL이면) 그 URL로 이동
-                        Toast.makeText(this, "검증 통과 (LV2)", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Lv2 + 해시 검증 통과", Toast.LENGTH_SHORT).show()
                         dialog.dismiss()
 
                         if (raw.startsWith("http://") || raw.startsWith("https://")) {
